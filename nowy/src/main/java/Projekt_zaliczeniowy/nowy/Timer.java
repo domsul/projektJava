@@ -10,7 +10,7 @@ int sec;
        try {
          this.sleep(1000);
        } catch(InterruptedException exc) {
-           System.out.println("W�tek zliczania czasu zosta� przerwany.");
+           System.out.println("Wątek zliczania czasu został przerwany.");
            return;
        }
        time++;

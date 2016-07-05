@@ -3,7 +3,7 @@ package Projekt_zaliczeniowy.nowy;
 import java.util.Random;
 
 public class Rozgrywka {
-	int los; //co wylosowa�o
+	int los; //co wylosowało
 	
 	Rozgrywka()
 	{
@@ -17,7 +17,7 @@ public class Rozgrywka {
 		if(los%2==1)
 			return 1;	//reszka
 		else
-			return 0;	//orzel
+			return 0;	//orzeł
 	}
 	
 	
@@ -25,20 +25,20 @@ public class Rozgrywka {
 	{
 		los=wylosuj_or();
 		if(los==0)
-			System.out.println("\n\nWylosowano or�a");
+			System.out.println("\n\nWylosowano orła");
 		else
-			System.out.println("\n\nWylosowano reszk�");
+			System.out.println("\n\nWylosowano reszkę");
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
-		System.out.print("\nL.p.\tImi�\t\tNazwisko\tW\tP\tObstawia");
+		System.out.print("\nL.p.\tImię\t\tNazwisko\tW\tP\tObstawia");
 		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t" +gracz.przegrana+"\t");
 		if(gracz.strona==0)
-			System.out.print("orze�");
+			System.out.print("orzeł");
 		if(gracz.strona==1)
 			System.out.print("reszka");
 		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t" +gracz.przegrana_komp+"\t");
 		if(gracz.strona_komp==0)
-			System.out.print("orze�");
+			System.out.print("orzeł");
 		if(gracz.strona_komp==1)
 			System.out.print("reszka");
 		if((gracz.strona==gracz.strona_komp)&&(gracz.strona==los))
@@ -75,21 +75,21 @@ public class Rozgrywka {
 	{
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
-		System.out.print("\nL.p.\tImi�\t\tNazwisko\tW\tP\tObstawia");
+		System.out.print("\nL.p.\tImię\t\tNazwisko\tW\tP\tObstawia");
 		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t" +gracz.przegrana+"\t");
 		if(gracz.strona==0)
 			System.out.print("papier");
 		if(gracz.strona==1)
-			System.out.print("kamie�");
+			System.out.print("kamień");
 		if(gracz.strona==2)
-			System.out.print("no�yce");
+			System.out.print("nożyce");
 		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t" +gracz.przegrana_komp+"\t");
 		if(gracz.strona_komp==0)
 			System.out.print("papier");
 		if(gracz.strona_komp==1)
-			System.out.print("kamie�");
+			System.out.print("kamień");
 		if(gracz.strona_komp==2)
-			System.out.print("no�yce");
+			System.out.print("nożyce");
 		if(gracz.strona==gracz.strona_komp)
 		{
 			System.out.println("\nNikt nie wygrywa.");
@@ -116,17 +116,17 @@ public class Rozgrywka {
 	{
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
-		System.out.print("\nL.p.\tImi�\t\tNazwisko\tPunkty\tObstawia");
+		System.out.print("\nL.p.\tImię\t\tNazwisko\tPunkty\tObstawia");
 		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t");
 		if(gracz.strona==0)
-			System.out.print("jele�");
+			System.out.print("jeleń");
 		if(gracz.strona==1)
-			System.out.print("zaj�c");
+			System.out.print("zając");
 		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t");
 		if(gracz.strona_komp==0)
-			System.out.print("jele�");
+			System.out.print("jeleń");
 		if(gracz.strona_komp==1)
-			System.out.print("zaj�c");
+			System.out.print("zając");
 		if((gracz.strona==gracz.strona_komp)&&(gracz.strona==0))
 		{
 			System.out.println("\nTY:CPU\n2:2");

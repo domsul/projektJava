@@ -19,9 +19,9 @@ public class Przedszkolak extends Gracz{
 	void Reakcja(int re)
 	{
 		if(re==1)
-			System.out.println("Mamo wygra�em!");
+			System.out.println("Mamo wygrałem!");
 		if(re==0)
-			System.out.println("Mamo, bo on mi nie daje wygra�!!!!!!!!!");
+			System.out.println("Mamo, bo on mi nie daje wygrać!!!!!!!!!");
 	}
 	
 	void Gra1(Timer t)

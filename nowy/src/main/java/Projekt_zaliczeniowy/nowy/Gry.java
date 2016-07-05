@@ -1,9 +1,3 @@
-/*
-
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Projekt_zaliczeniowy.nowy;
 
 import java.util.Random;
@@ -23,15 +17,15 @@ public class Gry {
 		wybor=4;
 		while(wybor>typ)
 		{
-			System.out.println("\nW kt�r� gr� chcesz zagra�?:\n");
+			System.out.println("\nW którą grę chcesz zagrać?:\n");
 		    switch(typ)
 		    {
 		    case 3:
 		    	System.out.println("3. Polowanie na Jelenia");
 		    case 2:
-		    	System.out.println("2. Papier, kamie�, no�yce");
+		    	System.out.println("2. Papier, kamień, nożyce");
 		    case 1:
-		    	System.out.println("1. Orze� czy reszka");
+		    	System.out.println("1. Orzeł czy reszka");
 		    	break;
 		    }
 		    wybor=odczyt.nextInt();

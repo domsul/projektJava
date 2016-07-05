@@ -45,16 +45,16 @@ public class Gracz{
     
     void Gra1(Timer t)
     {
-    	
+    	System.out.println("GRA: ORZEŁ CZY RESZKA");
     }
     
     void Gra2(Timer t)
     {
-    	
+    	System.out.println("GRA: PAPIER, KAMIEŃ CZY NOŻYCE");
     }
     
     void Gra3(Timer t)
     {
-    	
+    	System.out.println("GRA: POLOWANIE NA JELENIA");
     }
 }

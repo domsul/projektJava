@@ -31,20 +31,20 @@ public class Strona {
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stron�: \n0 - orze�\n1 - reszka");
+			System.out.println("\nWybierz stronę: \n0 - orzeł\n1 - reszka");
 			gracz.strona=odczyt.nextInt();
 			
-			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybra�e�");
+			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
 			switch(gracz.strona)
 			{
 			case 0:
-				System.out.print(" or�a.");
+				System.out.print(" orła.");
 				break;
 			case 1:
-				System.out.print(" reszk�.");
+				System.out.print(" reszkę.");
 				break;
 			default:
-				System.out.print(" warto�� niepoprawn�. Musisz wybra� ponownie.");
+				System.out.print(" wartość niepoprawną. Musisz wybrać ponownie.");
 				check=true;
 			}
 		}while(check==true);
@@ -52,10 +52,10 @@ public class Strona {
 		switch(gracz.strona_komp)
 		{
 		case 0:
-			System.out.print(" or�a.");
+			System.out.print(" orła.");
 			break;
 		case 1:
-			System.out.print(" reszk�.");
+			System.out.print(" reszkę.");
 			break;
 		}
 	}
@@ -82,23 +82,23 @@ public class Strona {
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stron�: \n0 - papier\n1 - kamie�\n2 - no�yce");
+			System.out.println("\nWybierz stronę: \n0 - papier\n1 - kamień\n2 - nożyce");
 			gracz.strona=odczyt.nextInt();
 			
-			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybra�e�");
+			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
 			switch(gracz.strona)
 			{
 			case 0:
 				System.out.print(" papier.");
 				break;
 			case 1:
-				System.out.print(" kamie�.");
+				System.out.print(" kamień.");
 				break;
             case 2:
-				System.out.print(" no�yce.");
+				System.out.print(" nożyce.");
 				break;
 			default:
-				System.out.print(" warto�� niepoprawn�. Musisz wybra� ponownie.");
+				System.out.print(" wartość niepoprawną. Musisz wybrać ponownie.");
 				check=true;
 			}
 		}while(check==true);
@@ -114,20 +114,20 @@ public class Strona {
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stron�: \n0 - jele�\n1 - zaj�c");
+			System.out.println("\nWybierz stronę: \n0 - jeleń\n1 - zając");
 			gracz.strona=odczyt.nextInt();
 			
-			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybra�e�");
+			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
 			switch(gracz.strona)
 			{
 			case 0:
 				System.out.print(" jelenia.");
 				break;
 			case 1:
-				System.out.print(" zaj�ca.");
+				System.out.print(" zająca.");
 				break;
 			default:
-				System.out.print(" warto�� niepoprawn�. Musisz wybra� ponownie.");
+				System.out.print(" wartość niepoprawną. Musisz wybrać ponownie.");
 				check=true;
 			}
 		}while(check==true);
