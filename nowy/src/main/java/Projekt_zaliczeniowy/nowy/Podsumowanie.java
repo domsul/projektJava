@@ -31,12 +31,16 @@ public class Podsumowanie {
 	
 	void pods_timeout(Gracz gracz, int n)
 	{
-		System.out.print("\nKlasyfikacja: ");
-		System.out.print("\nL.p.\tImię\tNazwisko\tWygrana (zl)");
-		System.out.print("\n1.\t" +gracz.imie+"\t" +gracz.nazwisko+"\t\t0");
-		System.out.print("\n1.\tPLAYER\tJEDEN\t\t" +n*gracz.stawka);
-		System.out.println("\nWygrywa komputer.");
-		System.out.println("Powód: Przekroczony limit czasu gry.");
+		System.out.println("\nPRZEGRYWASZ!");
+		System.out.println("Powód: Przekroczony limit czasu gry." +n+" gier to za dużo.");
 		gracz.Reakcja(0);
+	}
+	
+	void pods_jb(Gracz gracz)
+	{
+		System.out.print("\nKlasyfikacja: ");
+		System.out.print("\nL.p.\tImię\tNazwisko\tWygrana (zł)");
+		System.out.print("\n1.\t" +gracz.imie+"\t" +gracz.nazwisko+"\t\t" +gracz.wygrana);
+		System.out.print("\nWygrałeś: " +gracz.wygrana+"zł.");
 	}
 }

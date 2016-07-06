@@ -19,6 +19,7 @@ public class Uczen extends Przedszkolak{
     
     void Reakcja(int re)
 	{
+    	System.out.print(imie+" "+nazwisko+":");
 		if(re==1)
 			System.out.println("izi");
 		if(re==0)
@@ -41,6 +42,7 @@ public class Uczen extends Przedszkolak{
                 match.Rozgrywka_pkn(this,i,ilosc_gier);
                 System.out.print("Czas: ");
                 t.GetTime();
+                System.out.println("--------------------------------------------------------");
             }
             else
                 break;

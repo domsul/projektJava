@@ -154,4 +154,22 @@ public class Rozgrywka {
 			gracz.Reakcja(1);
 		}
 	}
+	
+	void Rozgrywka_jb(Gracz gracz, int i, int n, JednorekiBandyta jb, Wyswietlacz w)
+	{
+		int wygrana_w_rundzie=0;
+		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
+		
+		System.out.print("\nL.p.\tImię\t\tNazwisko\tWygrana(zł)\tObstawia(zł)");
+		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t\t" +gracz.stawka+"\t");
+		jb.Losowanie();
+		System.out.println("\n\nLosowanie:");
+		wygrana_w_rundzie=w.poinformuj()*gracz.stawka;
+		gracz.wygrana+=wygrana_w_rundzie;
+		System.out.println("Wygrywasz "+wygrana_w_rundzie+"zl.\n");
+		if(wygrana_w_rundzie==0)
+			gracz.Reakcja(0);
+		else
+			gracz.Reakcja(1);
+	}
 }

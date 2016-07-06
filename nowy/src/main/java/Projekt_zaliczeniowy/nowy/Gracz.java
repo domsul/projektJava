@@ -1,6 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
-public class Gracz{
+public abstract class Gracz{
     String imie;
     String nazwisko;
     int stawka;
@@ -12,6 +12,7 @@ public class Gracz{
     int wygrana_komp;
     int przegrana;
     int przegrana_komp;
+    
     Gracz()
     {
     	imie="player";
@@ -25,28 +26,9 @@ public class Gracz{
         nazwisko=m;
     }
     
-    void GetStawka(int s)
-    {
-    	stawka=s;
-    }
+    abstract void Reakcja(int re);
     
-    void GetTyp(int t)
-    {
-    	typ=t;
-    }
-    
-    void Reakcja(int re)
-	{
-		if(re==1)
-			System.out.println("1");
-		if(re==0)
-			System.out.println("0");
-	}
-    
-    void Gra1(Timer t)
-    {
-    	System.out.println("GRA: ORZEŁ CZY RESZKA");
-    }
+    abstract void Gra1(Timer t);
     
     void Gra2(Timer t)
     {
@@ -56,5 +38,15 @@ public class Gracz{
     void Gra3(Timer t)
     {
     	System.out.println("GRA: POLOWANIE NA JELENIA");
+    }
+    
+    void Gra4(Timer t)
+    {
+    	System.out.println("GRA: JEDNORĘKI BANDYTA");
+    }
+    
+    void zmien_Stawke(int s)
+    {
+    	stawka=s;
     }
 }

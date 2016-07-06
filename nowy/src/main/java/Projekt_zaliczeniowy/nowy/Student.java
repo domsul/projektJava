@@ -19,6 +19,7 @@ public class Student extends Uczen{
 	
 	void Reakcja(int re)
 	{
+		System.out.print(imie+" "+nazwisko+":");
 		if(re==1)
 			System.out.println("AAAAAA pijemy!");
 		if(re==0)
@@ -41,6 +42,7 @@ public class Student extends Uczen{
                 match.Rozgrywka_jz(this,i,ilosc_gier);
                 System.out.print("Czas: ");
                 t.GetTime();
+                System.out.println("--------------------------------------------------------");
             }
             else
                 break;

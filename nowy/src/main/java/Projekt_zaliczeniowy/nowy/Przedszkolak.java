@@ -18,6 +18,7 @@ public class Przedszkolak extends Gracz{
 	
 	void Reakcja(int re)
 	{
+		System.out.print(imie+" "+nazwisko+":");
 		if(re==1)
 			System.out.println("Mamo wygrałem!");
 		if(re==0)
@@ -40,6 +41,7 @@ public class Przedszkolak extends Gracz{
                 match.Rozgrywka_or(this,i,ilosc_gier);
                 System.out.print("Czas: ");
                 t.GetTime();
+                System.out.println("--------------------------------------------------------");
             }
             else
                 break;

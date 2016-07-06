@@ -14,12 +14,14 @@ public class Gry {
 		Timer tm=new Timer();
 		int wybor;
 		
-		wybor=4;
+		wybor=5;
 		while(wybor>typ)
 		{
 			System.out.println("\nW którą grę chcesz zagrać?:\n");
 		    switch(typ)
 		    {
+		    case 4:
+		    	System.out.println("4. Jednoręki Bandyta");
 		    case 3:
 		    	System.out.println("3. Polowanie na Jelenia");
 		    case 2:
@@ -40,6 +42,9 @@ public class Gry {
 			break;
 		case 3:
 			gracz.Gra3(tm);
+			break;
+		case 4:
+			gracz.Gra4(tm);
 			break;
 		}
     }
