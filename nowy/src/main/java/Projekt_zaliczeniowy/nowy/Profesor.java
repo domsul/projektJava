@@ -35,7 +35,7 @@ public class Profesor extends Student{
     	JednorekiBandyta jednoreki=new JednorekiBandyta();
     	Wyswietlacz monitor=new Wyswietlacz(jednoreki); //OBSERWATOR
     	t.start();
-    	wygrana=wygrana_komp=przegrana=przegrana_komp=0;
+    	wygrana=przegrana=0;
     	Rozgrywka match=new Rozgrywka();
     	
     	jednoreki.dodajObserwatora(monitor);

@@ -21,7 +21,7 @@ public class Rozgrywka {
 	}
 	
 	
-	void Rozgrywka_or(Gracz gracz, int i, int n)
+	void Rozgrywka_or(Gracz gracz, int i, int n, GraczKomputer gk)
 	{
 		los=wylosuj_or();
 		if(los==0)
@@ -36,29 +36,29 @@ public class Rozgrywka {
 			System.out.print("orzeł");
 		if(gracz.strona==1)
 			System.out.print("reszka");
-		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t" +gracz.przegrana_komp+"\t");
-		if(gracz.strona_komp==0)
+		System.out.print("\n2.\t" +gk.imie+"\t\t" +gk.nazwisko+"\t\t" +gk.wygrana+"\t" +gk.przegrana+"\t");
+		if(gk.strona==0)
 			System.out.print("orzeł");
-		if(gracz.strona_komp==1)
+		if(gk.strona==1)
 			System.out.print("reszka");
-		if((gracz.strona==gracz.strona_komp)&&(gracz.strona==los))
+		if((gracz.strona==gk.strona)&&(gracz.strona==los))
 		{
 			System.out.println("\nWygrywa "+gracz.imie+" "+gracz.nazwisko);
 			gracz.wygrana++;
-			gracz.przegrana_komp++;
+			gk.przegrana++;
 			gracz.Reakcja(1);
 		}
 		else if (gracz.strona==los)
 		{
 			System.out.println("\nWygrywa "+gracz.imie+" "+gracz.nazwisko);
 			gracz.wygrana++;
-			gracz.przegrana_komp++;
+			gk.przegrana++;
 			gracz.Reakcja(1);
 		}
-		else if (gracz.strona_komp==los)
+		else if (gk.strona==los)
 		{
-			System.out.println("\nWygrywa komputer");
-			gracz.wygrana_komp++;
+			System.out.println("\nWygrywa "+gk.imie+" "+gk.nazwisko);
+			gk.wygrana++;
 			gracz.przegrana++;
 			gracz.Reakcja(0);
 		}
@@ -66,12 +66,12 @@ public class Rozgrywka {
 		{
 			System.out.println("\nNikt nie wygrywa.");
 			gracz.przegrana++;
-			gracz.przegrana_komp++;
+			gk.przegrana++;
 			gracz.Reakcja(0);
 		}
 	}
 	
-	void Rozgrywka_pkn(Gracz gracz, int i, int n)
+	void Rozgrywka_pkn(Gracz gracz, int i, int n, GraczKomputer gk)
 	{
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
@@ -83,71 +83,71 @@ public class Rozgrywka {
 			System.out.print("kamień");
 		if(gracz.strona==2)
 			System.out.print("nożyce");
-		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t" +gracz.przegrana_komp+"\t");
-		if(gracz.strona_komp==0)
+		System.out.print("\n2.\t" +gk.imie+"\t\t" +gk.nazwisko+"\t\t" +gk.wygrana+"\t" +gk.przegrana+"\t");
+		if(gk.strona==0)
 			System.out.print("papier");
-		if(gracz.strona_komp==1)
+		if(gk.strona==1)
 			System.out.print("kamień");
-		if(gracz.strona_komp==2)
+		if(gk.strona==2)
 			System.out.print("nożyce");
-		if(gracz.strona==gracz.strona_komp)
+		if(gracz.strona==gk.strona)
 		{
 			System.out.println("\nNikt nie wygrywa.");
 			gracz.przegrana++;
-			gracz.przegrana_komp++;
+			gk.przegrana++;
 		}
-		if(((gracz.strona==0)&&(gracz.strona_komp==2))||((gracz.strona==1)&&(gracz.strona_komp==0))||((gracz.strona==2)&&(gracz.strona_komp==1)))
+		if(((gracz.strona==0)&&(gk.strona==2))||((gracz.strona==1)&&(gk.strona==0))||((gracz.strona==2)&&(gk.strona==1)))
 		{
-			System.out.println("\nWygrywa komputer");
+			System.out.println("\nWygrywa "+gk.imie+" "+gk.nazwisko);
 			gracz.przegrana++;
-			gracz.wygrana_komp++;
+			gk.wygrana++;
 			gracz.Reakcja(0);
 		}
-		if(((gracz.strona==0)&&(gracz.strona_komp==1))||((gracz.strona==1)&&(gracz.strona_komp==2))||((gracz.strona==2)&&(gracz.strona_komp==0)))
+		if(((gracz.strona==0)&&(gk.strona==1))||((gracz.strona==1)&&(gk.strona==2))||((gracz.strona==2)&&(gk.strona==0)))
 		{
 			System.out.println("\nWygrywa "+gracz.imie+" "+gracz.nazwisko);
 			gracz.wygrana++;
-			gracz.przegrana_komp++;
+			gk.przegrana++;
 			gracz.Reakcja(1);
 		}
 	}
 	
-	void Rozgrywka_jz(Gracz gracz, int i, int n)
+	void Rozgrywka_jz(Gracz gracz, int i, int n, GraczKomputer gk)
 	{
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
 		System.out.print("\nL.p.\tImię\t\tNazwisko\tPunkty\tObstawia");
-		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t");
+		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t" +gracz.przegrana+"\t");
 		if(gracz.strona==0)
 			System.out.print("jeleń");
 		if(gracz.strona==1)
 			System.out.print("zając");
-		System.out.print("\n2.\t PLAYER\t\tJEDEN\t\t" +gracz.wygrana_komp+"\t");
-		if(gracz.strona_komp==0)
+		System.out.print("\n2.\t" +gk.imie+"\t\t" +gk.nazwisko+"\t\t" +gk.wygrana+"\t" +gk.przegrana+"\t");
+		if(gk.strona==0)
 			System.out.print("jeleń");
-		if(gracz.strona_komp==1)
+		if(gk.strona==1)
 			System.out.print("zając");
-		if((gracz.strona==gracz.strona_komp)&&(gracz.strona==0))
+		if((gracz.strona==gk.strona)&&(gracz.strona==0))
 		{
 			System.out.println("\nTY:CPU\n2:2");
 			gracz.wygrana+=2;
-			gracz.wygrana_komp+=2;
+			gk.wygrana+=2;
 			gracz.Reakcja(1);
 		}
-		if((gracz.strona==gracz.strona_komp)&&(gracz.strona==1))
+		if((gracz.strona==gk.strona)&&(gracz.strona==1))
 		{
 			System.out.println("\nTY:CPU\n1:1");
 			gracz.wygrana++;
-			gracz.wygrana_komp++;
+			gk.wygrana++;
 			gracz.Reakcja(1);
 		}
-		if((gracz.strona==0)&&(gracz.strona_komp==1))
+		if((gracz.strona==0)&&(gk.strona==1))
 		{
 			System.out.println("\nTY:CPU\n0:1");
-			gracz.wygrana_komp++;
+			gk.wygrana++;
 			gracz.Reakcja(0);
 		}
-		if((gracz.strona==1)&&(gracz.strona_komp==0))
+		if((gracz.strona==1)&&(gk.strona==0))
 		{
 			System.out.println("\nTY:CPU\n1:0");
 			gracz.wygrana++;

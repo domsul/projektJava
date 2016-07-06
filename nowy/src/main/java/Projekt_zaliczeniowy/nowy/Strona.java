@@ -21,11 +21,11 @@ public class Strona {
 			return 0;	//orzel || zajac
 	}
 	
-	void Strona_or(Gracz gracz)
+	void Strona_or(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
 		
-		gracz.strona_komp=wylosuj_or();	//losuje komputer
+		gk.strona=wylosuj_or();	//losuje komputer
 		
 		//wybor strony monety przez gracza
 		do
@@ -48,8 +48,8 @@ public class Strona {
 				check=true;
 			}
 		}while(check==true);
-		System.out.print("\nKomputer wybiera ");
-		switch(gracz.strona_komp)
+		System.out.print("\n"+gk.imie+" " +gk.nazwisko+" wybiera ");
+		switch(gk.strona)
 		{
 		case 0:
 			System.out.print(" orła.");
@@ -72,11 +72,11 @@ public class Strona {
 			return 2;	//nozyce
 	}
 	
-	void Strona_pkn(Gracz gracz)
+	void Strona_pkn(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
 		
-		gracz.strona_komp=wylosuj_pkn();	//losuje komputer
+		gk.strona=wylosuj_pkn();	//losuje komputer
 		
 		//wybor przez gracza
 		do
@@ -104,11 +104,11 @@ public class Strona {
 		}while(check==true);
 	}
 	
-	void Strona_jz(Gracz gracz)
+	void Strona_jz(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
 		
-		gracz.strona_komp=wylosuj_or();	//losuje komputer
+		gk.strona=wylosuj_or();	//losuje komputer
 		
 		//wybor przez gracza
 		do

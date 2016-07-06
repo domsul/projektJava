@@ -19,8 +19,11 @@ public class Glowna {
         nazwa1 = odczyt.nextLine();
         System.out.println("Podaj nazwisko: ");
         nazwa11 = odczyt.nextLine();
-        System.out.println("Wybierz typ zawodnika:\n1 - Przedszkolak\n2 - Uczeń\n3 - Student\n4 - Profesor");
-        typ=odczyt.nextInt();
+        do
+        {
+	        System.out.println("Wybierz typ zawodnika:\n1 - Przedszkolak\n2 - Uczeń\n3 - Student\n4 - Profesor");
+	        typ=odczyt.nextInt();
+        }while(typ<0 || typ>4);
         
         //dane rozgrywki
         System.out.println("Podaj stawkę: ");
