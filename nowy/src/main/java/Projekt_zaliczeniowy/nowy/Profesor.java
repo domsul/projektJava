@@ -61,10 +61,10 @@ public class Profesor extends Student{
 
         //Podsumowanie
         Podsumowanie po=new Podsumowanie();
-        if(t.GetMin()<3)
-        	po.pods_jb(this);
-        else if(this.wygrana>=1000000)
+        if(this.wygrana>=1000000)
         	System.out.println("Brak pieniędzy w kasie");
+        else if(t.GetMin()<3)
+        	po.pods_jb(this);
         else
         	po.pods_timeout(this,ilosc_gier);
         System.out.print("\nCzas gry: ");
