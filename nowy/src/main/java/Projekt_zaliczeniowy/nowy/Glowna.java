@@ -8,6 +8,7 @@ public class Glowna {
     	String nazwa1,nazwa11;
     	int stawka=0,typ,n=-1;
         Scanner odczyt = new Scanner(System.in);
+        Menu m=new WyborTypu();
         Gry nowa=new Gry();
         Timer t_main=new Timer();
 
@@ -19,9 +20,11 @@ public class Glowna {
         nazwa1 = odczyt.nextLine();
         System.out.println("Podaj nazwisko: ");
         nazwa11 = odczyt.nextLine();
+        //DEKORATOR
+        m=new OpcjaTyp4(new OpcjaTyp3(new OpcjaTyp2(new OpcjaTyp1(m))));
         do
         {
-	        System.out.println("Wybierz typ zawodnika:\n1 - Przedszkolak\n2 - Uczeń\n3 - Student\n4 - Profesor");
+	        System.out.println(m.wyswietl());
 	        typ=odczyt.nextInt();
         }while(typ<0 || typ>4);
         

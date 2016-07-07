@@ -1,6 +1,5 @@
 package Projekt_zaliczeniowy.nowy;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Gry {
@@ -10,26 +9,28 @@ public class Gry {
 	}
 	void WybierzGre(int typ, Gracz gracz)
     {
+		Menu m=new WyborGry();
 		Scanner odczyt=new Scanner(System.in);
 		Timer tm=new Timer();
 		int wybor;
 		
 		wybor=5;
-		while(wybor>typ)
+		//DEKORATOR
+		switch(typ)
+	    {
+	    case 4:
+	    	m=new Opcja4(m);
+	    case 3:
+	    	m=new Opcja3(m);
+	    case 2:
+	    	m=new Opcja2(m);
+	    case 1:
+	    	m=new Opcja1(m);
+	    	break;
+	    }
+		while(wybor>typ || wybor<=0)
 		{
-			System.out.println("\nW którą grę chcesz zagrać?:\n");
-		    switch(typ)
-		    {
-		    case 4:
-		    	System.out.println("4. Jednoręki Bandyta");
-		    case 3:
-		    	System.out.println("3. Polowanie na Jelenia");
-		    case 2:
-		    	System.out.println("2. Papier, kamień, nożyce");
-		    case 1:
-		    	System.out.println("1. Orzeł czy reszka");
-		    	break;
-		    }
+			System.out.println(m.wyswietl());
 		    wybor=odczyt.nextInt();
 		}
 		switch(wybor)

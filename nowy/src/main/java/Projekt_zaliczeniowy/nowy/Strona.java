@@ -24,14 +24,16 @@ public class Strona {
 	void Strona_or(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
+		Menu m=new WyborStrony();
 		
 		gk.strona=wylosuj_or();	//losuje komputer
 		
 		//wybor strony monety przez gracza
+		m=new Opcja_reszka(new Opcja_orzel(m));
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stronę: \n0 - orzeł\n1 - reszka");
+			System.out.println(m.wyswietl());
 			gracz.strona=odczyt.nextInt();
 			
 			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
@@ -75,14 +77,16 @@ public class Strona {
 	void Strona_pkn(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
+		Menu m=new WyborStrony();
 		
 		gk.strona=wylosuj_pkn();	//losuje komputer
 		
 		//wybor przez gracza
+		m=new Opcja_nozyce(new Opcja_kamien(new Opcja_papier(m)));
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stronę: \n0 - papier\n1 - kamień\n2 - nożyce");
+			System.out.println(m.wyswietl());
 			gracz.strona=odczyt.nextInt();
 			
 			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
@@ -107,14 +111,16 @@ public class Strona {
 	void Strona_jz(Gracz gracz, GraczKomputer gk)
 	{
 		Scanner odczyt = new Scanner(System.in);
+		Menu m=new WyborStrony();
 		
 		gk.strona=wylosuj_or();	//losuje komputer
 		
 		//wybor przez gracza
+		m=new Opcja_zajac(new Opcja_jelen(m));
 		do
 		{
 			check=false;
-			System.out.println("\nWybierz stronę: \n0 - jeleń\n1 - zając");
+			System.out.println(m.wyswietl());
 			gracz.strona=odczyt.nextInt();
 			
 			System.out.print("\n" +gracz.imie+" " +gracz.nazwisko+": Wybrałeś");
