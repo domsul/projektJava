@@ -50,6 +50,8 @@ public class Strona {
 				check=true;
 			}
 		}while(check==true);
+		
+		//informacja o wyborze gracza CPU
 		System.out.print("\n"+gk.imie+" " +gk.nazwisko+" wybiera ");
 		switch(gk.strona)
 		{

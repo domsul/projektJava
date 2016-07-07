@@ -7,11 +7,8 @@ public abstract class Gracz{
     int typ;
     int ilosc_gier;
     int strona;
-    //int strona_komp;
     int wygrana;
-    //int wygrana_komp;
     int przegrana;
-    //int przegrana_komp;
     
     Gracz()
     {

@@ -9,7 +9,7 @@ public class Gry {
 	}
 	void WybierzGre(int typ, Gracz gracz)
     {
-		Menu m=new WyborGry();
+		Menu m=new WyborGry(); //menu stworzone za pomocą Dekoratora
 		Scanner odczyt=new Scanner(System.in);
 		Timer tm=new Timer();
 		int wybor;
@@ -28,12 +28,12 @@ public class Gry {
 	    	m=new Opcja1(m);
 	    	break;
 	    }
-		while(wybor>typ || wybor<=0)
+		while(wybor>typ || wybor<=0) //wybór gry
 		{
 			System.out.println(m.wyswietl());
 		    wybor=odczyt.nextInt();
 		}
-		switch(wybor)
+		switch(wybor) //wybór metody w zależności od wyboru gry
 		{
 		case 1:
 			gracz.Gra1(tm);

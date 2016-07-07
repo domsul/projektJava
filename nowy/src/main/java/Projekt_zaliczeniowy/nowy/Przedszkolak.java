@@ -33,11 +33,11 @@ public class Przedszkolak extends Gracz{
 		Scanner odczyt=new Scanner(System.in);
 		t.start();
 		wygrana=przegrana=0;
-		Zarzadca z=new Zarzadca();
-		Budowniczy b1=new Player1();
-		Budowniczy b2=new Player2();
-		Budowniczy b3=new Player3();
-		GraczKomputer[] g=new GraczKomputer[3];
+		Zarzadca z=new Zarzadca(); //Budowniczy
+		Budowniczy b1=new Player1(); //gracz 1
+		Budowniczy b2=new Player2(); //gracz 2
+		Budowniczy b3=new Player3(); //gracz 3
+		GraczKomputer[] g=new GraczKomputer[3]; //tablica graczy
 		//GRACZ 1
 		z.setBudowniczy(b1);
 		z.stworz_gracza();
@@ -46,13 +46,14 @@ public class Przedszkolak extends Gracz{
 		z.setBudowniczy(b2);
 		z.stworz_gracza();
 		g[1]=z.getGracz();
-		//GRACZ 1
+		//GRACZ 3
 		z.setBudowniczy(b3);
 		z.stworz_gracza();
 		g[2]=z.getGracz();
 		Strona wybor=new Strona();
 		Rozgrywka match=new Rozgrywka();
 		
+		//Wybór przeciwnika
 		do
 		{
 		System.out.println("Wybierz gracza:");
@@ -63,6 +64,7 @@ public class Przedszkolak extends Gracz{
 			System.out.println("Wybierz jeszcze raz.");
 		}while(player<0 || player>2);
 		
+		//Główna część gry
 		for(int i=0;i<ilosc_gier;i++)
         {
 			//Wybor orla/reszki przez graczy

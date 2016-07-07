@@ -8,7 +8,7 @@ public class Glowna {
     	String nazwa1,nazwa11;
     	int stawka=0,typ,n=-1;
         Scanner odczyt = new Scanner(System.in);
-        Menu m=new WyborTypu();
+        Menu m=new WyborTypu(); //menu stworzone za pomocą Dekoratora
         Gry nowa=new Gry();
         Timer t_main=new Timer();
 
@@ -20,8 +20,7 @@ public class Glowna {
         nazwa1 = odczyt.nextLine();
         System.out.println("Podaj nazwisko: ");
         nazwa11 = odczyt.nextLine();
-        //DEKORATOR
-        m=new OpcjaTyp4(new OpcjaTyp3(new OpcjaTyp2(new OpcjaTyp1(m))));
+        m=new OpcjaTyp4(new OpcjaTyp3(new OpcjaTyp2(new OpcjaTyp1(m)))); //DEKORATOR
         do
         {
 	        System.out.println(m.wyswietl());
@@ -30,14 +29,14 @@ public class Glowna {
         
         //dane rozgrywki
         System.out.println("Podaj stawkę: ");
-	    stawka=odczyt.nextInt();
+		stawka=odczyt.nextInt();
         
         while(n<=0)
         {
             System.out.println("Podaj ilość gier: ");
             n=odczyt.nextInt();
         }
-        switch(typ)	//wzorzec STRATEGIA
+        switch(typ) //wzorzec STRATEGIA
         {
         case 1:
         	Przedszkolak p1=new Przedszkolak(nazwa1,nazwa11,stawka,n);

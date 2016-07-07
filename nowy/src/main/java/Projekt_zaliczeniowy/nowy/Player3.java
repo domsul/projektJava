@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//gracz 3
 class Player3 extends Budowniczy{
 	public void dodajImie()
 	{

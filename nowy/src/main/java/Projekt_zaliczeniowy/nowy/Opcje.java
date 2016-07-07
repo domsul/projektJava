@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//OPCJE DO WYBORU GRY
 class Opcja1 extends Dekorator {
 	Menu m;
 	

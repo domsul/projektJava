@@ -32,7 +32,7 @@ public class Podsumowanie {
 	void pods_timeout(Gracz gracz, int n)
 	{
 		System.out.println("\nPRZEGRYWASZ!");
-		System.out.println("Powód: Przekroczony limit czasu gry." +n+" gier to za dużo.");
+		System.out.println("Powód: Przekroczony limit czasu gry. " +n+" gier to za dużo jak dla Ciebie.");
 		gracz.Reakcja(0);
 	}
 	

@@ -28,6 +28,8 @@ public class Rozgrywka {
 			System.out.println("\n\nWylosowano orła");
 		else
 			System.out.println("\n\nWylosowano reszkę");
+		
+		//Wypisanie statystyk i obstawianych typów
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
 		System.out.print("\nL.p.\tImię\t\tNazwisko\tW\tP\tObstawia");
@@ -41,6 +43,8 @@ public class Rozgrywka {
 			System.out.print("orzeł");
 		if(gk.strona==1)
 			System.out.print("reszka");
+		
+		//Sprawdzenie wyników gry i poinformowanie o wygranej/przegranej
 		if((gracz.strona==gk.strona)&&(gracz.strona==los))
 		{
 			System.out.println("\nWygrywa "+gracz.imie+" "+gracz.nazwisko);
@@ -73,6 +77,7 @@ public class Rozgrywka {
 	
 	void Rozgrywka_pkn(Gracz gracz, int i, int n, GraczKomputer gk)
 	{
+		//Wypisanie statystyk i obstawianych typów
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
 		System.out.print("\nL.p.\tImię\t\tNazwisko\tW\tP\tObstawia");
@@ -90,6 +95,8 @@ public class Rozgrywka {
 			System.out.print("kamień");
 		if(gk.strona==2)
 			System.out.print("nożyce");
+		
+		//Sprawdzenie wyników gry i poinformowanie o wygranej/przegranej
 		if(gracz.strona==gk.strona)
 		{
 			System.out.println("\nNikt nie wygrywa.");
@@ -114,6 +121,7 @@ public class Rozgrywka {
 	
 	void Rozgrywka_jz(Gracz gracz, int i, int n, GraczKomputer gk)
 	{
+		//Wypisanie statystyk i obstawianych typów
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
 		System.out.print("\nL.p.\tImię\t\tNazwisko\tPunkty\tObstawia");
@@ -127,6 +135,8 @@ public class Rozgrywka {
 			System.out.print("jeleń");
 		if(gk.strona==1)
 			System.out.print("zając");
+		
+		//Sprawdzenie wyników gry i poinformowanie o wygranej/przegranej
 		if((gracz.strona==gk.strona)&&(gracz.strona==0))
 		{
 			System.out.println("\nTY:CPU\n2:2");
@@ -158,10 +168,14 @@ public class Rozgrywka {
 	void Rozgrywka_jb(Gracz gracz, int i, int n, JednorekiBandyta jb, Wyswietlacz w)
 	{
 		int wygrana_w_rundzie=0;
+		
+		//Wypisanie statystyk i obstawianych typów
 		System.out.print("\nStatystyki po "+i+" z "+n+" gier:");
 		
-		System.out.print("\nL.p.\tImię\t\tNazwisko\tWygrana(zł)\tObstawia(zł)");
+		System.out.print("\nL.p.\tImię\t\tNazwisko\tWygrana (zł)\tObstawia (zł)");
 		System.out.print("\n1.\t" +gracz.imie+"\t\t" +gracz.nazwisko+"\t\t" +gracz.wygrana+"\t\t" +gracz.stawka+"\t");
+		
+		//Sprawdzenie wyników gry i poinformowanie o wygranej/przegranej
 		jb.Losowanie();
 		System.out.println("\n\nLosowanie:");
 		wygrana_w_rundzie=w.poinformuj()*gracz.stawka;

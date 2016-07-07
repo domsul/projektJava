@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//buduje gracza
 public class Zarzadca {
 	private Budowniczy bob;
 	

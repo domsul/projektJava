@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//dane gracza CPU
 public class GraczKomputer {
 	public String imie;
 	public String nazwisko;

@@ -3,6 +3,7 @@ package Projekt_zaliczeniowy.nowy;
 import java.util.ArrayList;
 import java.util.Random;
 
+//obiekt do obserwowania
 public class JednorekiBandyta implements Obserwowany{
 	protected ArrayList<Obserwator> obserwatorzy;
 	private int[] liczby;

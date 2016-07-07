@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//interfejs budowniczego
 abstract class Budowniczy {
 	protected GraczKomputer gk;
 	

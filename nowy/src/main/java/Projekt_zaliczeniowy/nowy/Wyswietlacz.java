@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//obserwuje wyniki
 public class Wyswietlacz implements Obserwator, Publikuj{
 	private int[] liczby;
 	private JednorekiBandyta jb;

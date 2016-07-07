@@ -1,5 +1,6 @@
 package Projekt_zaliczeniowy.nowy;
 
+//OPCJE DO WYBORU JEDNEJ Z MOŻLIWOŚCI
 class Opcja_orzel extends Dekorator {
 	Menu m;
 	
